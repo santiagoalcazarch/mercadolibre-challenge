@@ -1,0 +1,30 @@
+
+.search-layout{
+
+    background-color: $mainYellow;
+
+    .search-input{
+        font-size: 18px;
+        color: $mainBlack;
+        
+        input{
+            border: none;
+            max-width: 1000px;
+        }
+
+        .search-btn{
+            background-color: transparent;
+            border: none;
+            padding: 10px;
+
+            img{
+                max-width: 20px;
+            }
+        }
+    }
+
+    .search-icon{
+        background-color: $mainGray;
+    }
+
+}
