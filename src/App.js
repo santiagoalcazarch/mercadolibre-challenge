@@ -1,10 +1,10 @@
 import React from 'react'
-import Layout from './ecommerce/pages/products/Layout'
+import AppRoutes from './routes/AppRoutes'
 
 const App = () => {
   return (
     <div>
-      <Layout />
+      <AppRoutes />
     </div>
   )
 }

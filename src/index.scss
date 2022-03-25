@@ -1,3 +1,14 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
 @import './shared/styles/imports';
+
+.c-row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a:link, a:visited, a:hover, a:focus, a:active{
+  color: black;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}

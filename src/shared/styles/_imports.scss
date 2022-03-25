@@ -2,4 +2,12 @@
 @import './variables';
 
 
-@import '../../shared/components/search_bar/style/search-bar';
+@import '../../shared/components/SearchBar/search-bar';
+@import '../../shared/components/Breadcrumb/breadcrumb';
+@import '../../shared/components/Buttons/blue-button';
+@import '../../ecommerce/components/Layout/MainLayout/main-layout';
+@import '../../ecommerce/components/ItemListP/Item/item';
+@import '../../ecommerce/components/ItemListP/ItemList/item-list';
+@import '../../ecommerce/components/ItemP/ItemLayout/item-layout';
+@import '../../ecommerce/components/ItemP/ItemData/item-data';
+@import '../../ecommerce/components/ItemP/ItemImage/item-image';

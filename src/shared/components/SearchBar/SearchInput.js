@@ -14,7 +14,7 @@ const SearchInput = props => {
         aria-labelledby='serach-action'
       />
       <span className="input-group-text m-0 p-0" id="serach-action">
-        <button className="search-btn">
+        <button className="search-btn" id="search-btn">
           <img src={SearchImg} alt="Search" />
         </button>
       </span>

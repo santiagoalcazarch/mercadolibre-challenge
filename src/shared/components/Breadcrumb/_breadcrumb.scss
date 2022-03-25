@@ -1,0 +1,30 @@
+
+.breadcrumb-container{
+  padding: 16px 0;
+
+  ul.breadcrumb-items{
+    display: inline;
+
+    li.breadcrumb-item{
+      display: inline;
+
+      color: $mainGray;
+      
+      a:link, a:visited, a:hover, a:focus, a:active{
+        color: $mainGray;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+      
+      a:hover{
+        color: $mainBlack;
+      }
+    }
+
+    li.breadcrumb-item::before{
+      content: "";
+      display: none;
+    }
+    
+  }
+}

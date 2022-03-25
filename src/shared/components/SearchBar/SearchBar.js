@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Logo from '../logo/Logo'
 import SearchInput from './SearchInput'
+import Logo from '../Logo/Logo'
 
 const SearchBar = props => {
   return (

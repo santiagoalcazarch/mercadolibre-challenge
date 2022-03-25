@@ -1,0 +1,11 @@
+
+.blue-button{
+  width: 100%;
+  background-color: $mainBlue;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.blue-button:hover{
+  background-color: #70a2ff;
+}

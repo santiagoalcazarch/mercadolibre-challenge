@@ -1,0 +1,27 @@
+
+.item-list-container{
+
+  background-color: white;
+
+  .item-list-content{
+    
+    .item-divider{
+      height: 1px;
+      background-color: $mainLightGray;
+    }
+  
+    .item-divider:last-child{
+      display: none;
+    }
+
+    .item-list-item{
+      padding: 0 16px;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .item-list-item:hover{
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+}
