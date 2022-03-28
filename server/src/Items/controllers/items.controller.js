@@ -2,7 +2,7 @@
 const repository = require('../repositories/items.repository');
 const validateErros = require('../../helpers/request_validations');
 const { returnRequestError, returnUnknowServerError, returnSuccessfullRes } = require('../../helpers/responses');
-const { parseListItemFromMeliResponse } = require('../services/meli_api_parse');
+const { parseListItemsFromMeliResponse, parseItemFromMeliResponse } = require('../services/meli_api_parse');
 /**
  * Realiza el llamada a la api de mercadolibre y retorna
  * items
@@ -17,7 +17,7 @@ const getItemsList = async ( req, res ) => {
   const limit = req.query.limit;
   const apiMeliResponse = await repository.getListItems(query, limit)
   if ( apiMeliResponse ) {
-    const bodyResponse = parseListItemFromMeliResponse(apiMeliResponse)
+    const bodyResponse = parseListItemsFromMeliResponse(apiMeliResponse)
 
     return returnSuccessfullRes(res, bodyResponse);
   }else{
@@ -36,11 +36,15 @@ const getItemsList = async ( req, res ) => {
   if ( error ) return returnRequestError(res, error);
 
   const query = req.params.id;
-  const apiMeliResponse = await repository.getItem(query)
+  const apiMeliResponse = await repository.getItemInformation(query)
   
   if ( apiMeliResponse ) {
-    const { itemResp, ItemDescRespo } = apiMeliResponse;
-    // const bodyResponse = parseListItemFromMeliResponse(apiMeliResponse)
+
+    const { item, itemDescription } = apiMeliResponse;
+
+    const itemCategories = await repository.getCategory( item?.category_id )
+    
+    const bodyResponse = parseItemFromMeliResponse(item, itemDescription, itemCategories)
 
     return returnSuccessfullRes(res, bodyResponse);
   }else{
