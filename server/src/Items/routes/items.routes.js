@@ -4,7 +4,7 @@
  * host + /api/items
  */
 const express = require('express');
-const { query } = require('express-validator');
+const { query, param } = require('express-validator');
 
 
 const router = express.Router();
@@ -22,7 +22,7 @@ router.get(
     query('q').trim().isLength({min: 1}).withMessage("Invalid query"),
     query('limit').isInt({ min: 1, max: 100 }).withMessage("Invalid limit")
   ],
-  itemsController.getItems
+  itemsController.getItemsList
 );
 
 
@@ -33,7 +33,7 @@ router.get(
 router.get(
   '/:id', 
   [
-    
+    param('id').isLength({min: 1}).withMessage("Invalid id")
   ],
   itemsController.getItem
 );

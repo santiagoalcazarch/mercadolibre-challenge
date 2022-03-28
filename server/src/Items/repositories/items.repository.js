@@ -11,6 +11,20 @@ const getListItems = async ( query, limit ) => {
   }
 }
 
+const getItem = async ( itemId ) => {
+  try {
+    const item = await axios.get( api_routes.API_MELI_ITEM(itemId) )
+    const itemDescription = await axios.get( api_routes.API_MELI_ITEM_DESC(itemId) )
+    return {
+      item: item.data,
+      itemDescription: itemDescription.data
+    };
+  } catch (error) {
+    return undefined;
+  }
+}
+
 module.exports = {
   getListItems,
+  getItem
 }
