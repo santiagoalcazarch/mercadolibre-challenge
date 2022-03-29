@@ -1,5 +1,8 @@
 
 
 export const HOME = "/";
-export const LIST_ITEM = "/list";
-export const ITEM = "/item";
+
+export const LIST_ITEM = "/items";
+
+export const ITEM = "/items/:id";
+export const ITEM_FUNC = (itemId) => `/items/${itemId}`;

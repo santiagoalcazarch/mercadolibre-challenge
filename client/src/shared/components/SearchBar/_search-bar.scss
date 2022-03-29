@@ -3,6 +3,10 @@
 
     background-color: $mainYellow;
 
+    form{
+        width: 100%;
+    }
+
     .search-input{
         font-size: 18px;
         color: $mainBlack;
@@ -29,6 +33,10 @@
 
     .search-icon{
         background-color: $mainGray;
+    }
+
+    .invalid-msg{
+        color: $mainRed;
     }
 
 }

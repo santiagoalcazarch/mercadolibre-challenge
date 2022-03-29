@@ -1,17 +1,33 @@
-
-
 import React from 'react'
-import PropTypes from 'prop-types'
 import ItemList from '../../components/ItemListP/ItemList/ItemList'
+import { useSelector } from 'react-redux'
+import { requestState as requestStateEnum } from "../../../helpers/request_states";
+import Loading from '../../../shared/components/Loading/Loading';
+import MessageBox from '../../../shared/components/Message-box/Message_box';
 
-const ListItemPage = props => {
+const ListItemPage = () => {
+
+  const { itemsList, requestState } = useSelector(( state ) => state.items);
+
   return (
     <div>
-      <ItemList itemList={[1, 2, 3]} />
+      {
+        requestState === requestStateEnum.SUCCESS && 
+          <ItemList itemList={itemsList.items} />
+      }
+      {
+        requestState === requestStateEnum.LOADING && 
+          <Loading />
+      }
+      {
+        requestState === requestStateEnum.FAILED && 
+          <MessageBox 
+            title="Error"
+            description="Ha ocurrido un error obteniendo la información"
+          />
+      }
     </div>
   )
 }
-
-ListItemPage.propTypes = {}
 
 export default ListItemPage

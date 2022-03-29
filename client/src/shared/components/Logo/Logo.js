@@ -1,5 +1,7 @@
 
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { HOME } from '../../../routes/routes'
 import LogoImg from '../../assets/icons/Logo_ML@2x.png'
 
 const Logo = () => {
@@ -7,7 +9,11 @@ const Logo = () => {
     <div
       className="m-3"
     >
-      <img src={LogoImg} alt="Main Logo" style={{ maxWidth: 60 }} />
+      <Link
+        to={HOME}
+      >
+        <img src={LogoImg} alt="Main Logo" style={{ maxWidth: 60 }} />
+      </Link>
     </div>
   )
 }

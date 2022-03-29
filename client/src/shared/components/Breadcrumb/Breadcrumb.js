@@ -1,8 +1,30 @@
 
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux';
+import { useMatch } from 'react-router-dom';
 
-const Breadcrumb = ({ categories }) => {
+import { ITEM } from "../../../routes/routes";
+
+const Breadcrumb = () => {
+
+  const match = useMatch(ITEM);
+  const [categories, setCategories] = useState([]);
+
+  const { itemsList } = useSelector(( state ) => state.items);
+
+  useEffect(() => {
+
+    let categoriesApi = [];
+    if ( match ){
+      // El usuario se encuentra en la ruta específica de un Item
+
+    }else{
+      // El usuario se encuentra en la ruta de listar items
+      categoriesApi = itemsList.categories;
+    }
+    setCategories(categoriesApi);
+  }, [match, itemsList.categories])
+
   return (
     <div className="container p-0">
       <div className="breadcrumb-container">
@@ -10,7 +32,7 @@ const Breadcrumb = ({ categories }) => {
         <ul className="breadcrumb-items p-0">
           {
             categories.map( (category, i) => 
-              <li className="breadcrumb-item p-0">
+              <li key={i} className="breadcrumb-item p-0">
                 <a href="#">
                   <span> { category } </span>
                 </a>
@@ -25,10 +47,6 @@ const Breadcrumb = ({ categories }) => {
       </div>
     </div>
   )
-}
-
-Breadcrumb.propTypes = {
-  categories: PropTypes.array.isRequired,
 }
 
 export default Breadcrumb
