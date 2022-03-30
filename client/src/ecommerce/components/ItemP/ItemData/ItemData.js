@@ -23,7 +23,10 @@ const ItemData = ({ item }) => {
 
   return (
     <div className="item-l-data">
-      <div className="item-l-state-sold"> { itemCondition ? (itemCondition + " - ") : "" } 234 vendidos </div>
+      <div className="item-l-state-sold"> 
+        { itemCondition ? (itemCondition + " - ") : "" } 
+        { item.sold_quantity } vendidos 
+      </div>
       <div className="item-l-name"> { item.title } </div>
       <div className="item-l-price"> { itemPrice } </div>
 
