@@ -1,3 +1,7 @@
+/**
+ * Contiene la interacción de la aplicación con 
+ * la cada de acceso a datos o llamadas al API
+ */
 
 import { getRouteWithQueryParams } from "../../helpers/create_route"
 import excecuteFetch from "../../helpers/fetch";

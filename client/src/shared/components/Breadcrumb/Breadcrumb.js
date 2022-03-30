@@ -5,6 +5,11 @@ import { useMatch } from 'react-router-dom';
 
 import { ITEM, LIST_ITEM } from "../../../routes/routes";
 
+/** 
+ * Componente Miga de Pan 
+ * Muestra las categorias para poder ubicar al usuario 
+ * en la navegación actual
+ */
 const Breadcrumb = () => {
 
   const itemMatch = useMatch(ITEM);

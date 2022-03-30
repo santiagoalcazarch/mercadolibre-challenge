@@ -2,8 +2,18 @@ import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
 import Shipping from '../../../../shared/assets/icons/ic_shipping@2x.png'
 
+/**
+ * Muestra la información de un item. Este item pertence
+ * a la lista de items obtenida del API
+ * @param {item} item
+ * @returns 
+ */
 const Item = ({ item }) => {
 
+  /**
+   * Con los datos recibidos del API y utilizando Intl, se
+   * renderiza adecuadamente el monto del item 
+   */
   const itemPrice = useMemo(() => 
     new Intl.NumberFormat('es-CO', { 
       style: 'currency', 

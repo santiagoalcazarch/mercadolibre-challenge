@@ -1,6 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+/**
+ * Renderiza un contenedor para mostrar al usuario 
+ * diferentes mensajes
+ */
 const MessageBox = ({title, description}) => {
   return (
     <div className="message-box message p-5">

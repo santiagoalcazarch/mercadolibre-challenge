@@ -3,6 +3,7 @@ import { Outlet} from 'react-router-dom'
 
 import Breadcrumb from '../../../../shared/components/Breadcrumb/Breadcrumb'
 
+/** Layout que muestra el contenido principal */
 const MainLayout = () => {
 
   return (

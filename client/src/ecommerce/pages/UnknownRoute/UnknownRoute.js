@@ -5,6 +5,9 @@ import { HOME } from '../../../routes/routes'
 import BlueButton from '../../../shared/components/Buttons/BlueButton'
 import MessageBox from '../../../shared/components/Message-box/Message_box'
 
+/** Debería renderizarse cada que el usuario se encuentre 
+ * en una ruta no permitida o inexistente
+ */
 const UnknownRoute = () => {
 
   const navigate = useNavigate();

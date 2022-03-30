@@ -2,6 +2,10 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
+/* Muestra una image
+ * Se realizó un componente aparte por la posible inclusión de 
+ * alguna funcionalidad sobre la imagen en un futuro
+ */
 const ItemImage = ({ imageSrc, alt }) => {
 
   return (

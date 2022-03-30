@@ -8,10 +8,14 @@ import ItemDescription from '../ItemDescription/ItemDescription'
 import { requestState as requestStateEnum } from "../../../../helpers/request_states";
 import MessageBox from '../../../../shared/components/Message-box/Message_box'
 
+/* Layout de la pagina para mostrar el contenido de un Item 
+ * el contenido es obtenido desde [items - redux]
+*/
 const ItemLayout = () => {
 
   const { itemInfo: {item}, requestState } = useSelector(( state ) => state.items);
 
+  /* El contenido del item es válido */
   const canShowItem = () => item.title && item.picture && item.price;
 
   return (

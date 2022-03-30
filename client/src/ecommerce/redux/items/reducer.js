@@ -4,12 +4,14 @@ import { itemsTypes } from "./types"
 const itemsListInit = { categories: [], items: [] };
 const itemInfoInit = { categories: [], item: {} }
 
+// Estado inicial de [items - reducer]
 const _initialState = {
   itemsList: itemsListInit,
   itemInfo: itemInfoInit,
   requestState: requestState.INIT
 }
 
+// [items - reducer]
 export const itemsReducer = (state = _initialState, action) => {
 
   switch (action.type) {

@@ -2,6 +2,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+/**
+ * Muestra la descripción de un item en particular
+ */
 const ItemDescription = ({ itemDescription }) => {
   return (
     <div className="item-l-desc-content mt-4">

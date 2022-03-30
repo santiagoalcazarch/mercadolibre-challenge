@@ -1,11 +1,19 @@
+
+/**
+ * Contiene todas las acciones que puede llamar el usuario
+ * desde cualquier parde de la aplicación utilizando el
+ * dispatch()
+ */
+
 import { requestState } from "../../../helpers/request_states";
 import { itemService } from "../../services/items.services";
 import { itemsTypes } from "./types";
 
 /**
- * Realiza un [disptach] para llamar al API y
- * establecer en el estado global, la respuesta a
- * esta petición 
+ * Realiza un llamado al API para obtener
+ * una lista de items de acuerdo a una cadena de
+ * busqueda y almacenarla la información en
+ * el estado [item: itemsList]
  * @param {string} query 
  */
 const searchAndSetItemsList = ( query ) => {
@@ -32,6 +40,12 @@ const searchAndSetItemsList = ( query ) => {
   }
 }
 
+/**
+ * Realiza un llamado al API para obtener
+ * un item de acuerdo a su ID y almacenarlo en
+ * el estado [item: itemInfo]
+ * @param {string} itemId 
+ */
 const searchAndSetItem = ( itemId ) => {
   return async ( dispatch ) => {
 
@@ -56,7 +70,9 @@ const searchAndSetItem = ( itemId ) => {
   }
 }
 
-
+/**
+ * Inicializa el estado global de [item - reducer]
+ */
 const cleanList = ( ) => {
   return async ( dispatch ) => {
     dispatch({

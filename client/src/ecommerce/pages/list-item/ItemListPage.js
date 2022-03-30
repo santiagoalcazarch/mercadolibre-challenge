@@ -6,6 +6,9 @@ import Loading from '../../../shared/components/Loading/Loading';
 import MessageBox from '../../../shared/components/Message-box/Message_box';
 import { actions } from '../../redux/items/actions';
 
+/* En esta página se muestran los items como resultado
+ * de una busqueda. Los items se consumen de [items - reducer]
+ */
 const ListItemPage = () => {
 
   const { itemsList, requestState } = useSelector(( state ) => state.items);

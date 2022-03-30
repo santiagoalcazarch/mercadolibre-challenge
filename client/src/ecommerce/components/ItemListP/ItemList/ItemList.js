@@ -6,8 +6,17 @@ import { Link } from 'react-router-dom'
 import { ITEM_FUNC } from '../../../../routes/routes'
 import MessageBox from '../../../../shared/components/Message-box/Message_box'
 
+/**
+ * Permite mostrar la lista de items, cual se 
+ * recibe como parametro
+ * @param {array} itemList 
+ * @returns 
+ */
 const ItemList = ({ itemList }) => {
 
+  /**
+   * Si la lista se encuentra vacía, despliega un mensaje
+   */
   if ( itemList.length === 0 ) {
     return (
       <MessageBox

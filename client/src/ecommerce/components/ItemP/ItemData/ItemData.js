@@ -3,7 +3,10 @@ import PropTypes from 'prop-types'
 import BlueButton from '../../../../shared/components/Buttons/BlueButton'
 import { itemCondition as itemConditionEnum } from '../../../../helpers/condition_states'
 
-
+/**
+ * Muestra datos como el valor, el titulo y el estado de 
+ * un Item
+ */
 const ItemData = ({ item }) => {
 
   const itemCondition = useMemo(() => {

@@ -8,6 +8,7 @@ import { actions } from '../../../ecommerce/redux/items/actions';
 import { useQuery } from '../../../helpers/hooks/useQuery'
 import { LIST_ITEM } from '../../../routes/routes';
 
+/** Search bar container */
 const SearchBar = () => {
 
   const query = useQuery();

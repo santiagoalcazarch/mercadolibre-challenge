@@ -4,6 +4,10 @@ import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { actions } from '../../redux/items/actions';
 
+/**
+ * En esta pagina se muestra toda la información de un item
+ * Se realiza [dispatch] para llamar al API
+ */
 const ItemPage = () => {
 
   const { id: itemId } = useParams();

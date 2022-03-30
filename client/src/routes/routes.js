@@ -1,4 +1,8 @@
 
+/**
+ * Se encuentran todos los "Strings" de las rutas
+ * para estandarizar su llamado y uso
+ */
 
 export const HOME = "/";
 

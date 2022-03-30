@@ -1,6 +1,9 @@
 import React from 'react'
 import MessageBox from '../../../shared/components/Message-box/Message_box'
 
+/**
+ * Muestra la bienvenida a la aplicación
+ */
 const Welcome = () => {
   return (
     <MessageBox 

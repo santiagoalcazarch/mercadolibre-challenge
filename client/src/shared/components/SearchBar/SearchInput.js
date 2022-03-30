@@ -8,11 +8,15 @@ import { useNavigate } from "react-router-dom";
 import SearchImg from '../../assets/icons/ic_Search@2x.png'
 import { LIST_ITEM } from '../../../routes/routes';
 
-
+/** Input del SearchBar */
 const SearchInput = ({ serachInitValue = "" }) => {
 
   const navigate = useNavigate();
 
+  /**
+   * Se crea un objeto Formik pensando en la inclusión
+   * de otros posibles campos a futuro
+   */
   const formik = useFormik({
     initialValues: { search: serachInitValue },
     enableReinitialize: true,

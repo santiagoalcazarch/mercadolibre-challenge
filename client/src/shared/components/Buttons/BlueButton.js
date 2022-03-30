@@ -3,6 +3,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+/**
+ * Botón con fondo azul multiproposito
+ */
 const BlueButton = ({ child, onClick }) => {
   return (
     <div>

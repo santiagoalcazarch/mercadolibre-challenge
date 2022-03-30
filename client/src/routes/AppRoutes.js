@@ -8,6 +8,9 @@ import { HOME, ITEM, LIST_ITEM } from './routes'
 
 const ItemPage = React.lazy(() => import("../ecommerce/pages/item/ItemPage"));
 
+/**
+ * Rutas de la aplicación
+ */
 const AppRoutes = () => {
   
   return (
