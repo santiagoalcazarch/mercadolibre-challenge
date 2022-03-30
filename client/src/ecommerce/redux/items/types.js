@@ -1,6 +1,7 @@
 
 export const itemsTypes = {
   setListOfItems: '[ITEMS] Set list of items',
-  setItems: '[ITEMS] Set item',
+  cleanList: '[ITEMS] Clean list',
+  setItem: '[ITEMS] Set item',
   setRequestState: '[ITEMS] Set request state'
 }

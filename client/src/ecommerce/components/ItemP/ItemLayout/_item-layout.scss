@@ -2,13 +2,21 @@
 .item-l-container{
 
   background-color: #fff;
+  margin-bottom: 32px;
 
   .item-l-content{
     padding: 32px;
-  }
 
-  .item-l-data-content{
-    flex: 1;
-  }
+    .item-l-img-container{
+      flex: 3;
+    }
+  
+    .item-l-data-content{
+      flex: 2;
+    }
 
+    .item-l-data-description{
+      width: 80%;
+    }
+  }
 }

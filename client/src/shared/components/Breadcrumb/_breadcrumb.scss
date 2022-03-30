@@ -25,6 +25,10 @@
       content: "";
       display: none;
     }
+
+    li.breadcrumb-item:last-child span{
+      color: $mainBlack;
+    }
     
   }
 }

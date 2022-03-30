@@ -3,27 +3,28 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useMatch } from 'react-router-dom';
 
-import { ITEM } from "../../../routes/routes";
+import { ITEM, LIST_ITEM } from "../../../routes/routes";
 
 const Breadcrumb = () => {
 
-  const match = useMatch(ITEM);
+  const itemMatch = useMatch(ITEM);
+  const itemListMatch = useMatch(LIST_ITEM);
   const [categories, setCategories] = useState([]);
 
-  const { itemsList } = useSelector(( state ) => state.items);
+  const { itemsList, itemInfo } = useSelector(( state ) => state.items);
 
   useEffect(() => {
-
     let categoriesApi = [];
-    if ( match ){
+    if ( itemMatch ){
       // El usuario se encuentra en la ruta específica de un Item
-
-    }else{
+      categoriesApi = itemInfo.categories;
+    }
+    if ( itemListMatch ){
       // El usuario se encuentra en la ruta de listar items
       categoriesApi = itemsList.categories;
     }
     setCategories(categoriesApi);
-  }, [match, itemsList.categories])
+  }, [itemMatch, itemListMatch, itemsList.categories, itemInfo.categories])
 
   return (
     <div className="container p-0">

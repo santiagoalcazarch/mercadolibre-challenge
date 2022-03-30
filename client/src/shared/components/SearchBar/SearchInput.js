@@ -3,17 +3,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
-import { useDispatch } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 
 import SearchImg from '../../assets/icons/ic_Search@2x.png'
-import { actions } from '../../../ecommerce/redux/items/actions';
 import { LIST_ITEM } from '../../../routes/routes';
 
 
 const SearchInput = ({ serachInitValue = "" }) => {
 
-  const dispatch = useDispatch( );
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -25,7 +22,6 @@ const SearchInput = ({ serachInitValue = "" }) => {
         .required('¿Estas buscando algo? ¡Ingresalo!'),
     }),
     onSubmit: values => {
-      dispatch( actions.searchAndSetItemsList( values.search ) );
       navigate(`${LIST_ITEM}?search=${values.search}`);
     },
   });

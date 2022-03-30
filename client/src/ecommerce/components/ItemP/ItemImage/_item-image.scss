@@ -1,5 +1,11 @@
 
 
-.item-l-img img{
-  min-width: 680px;
+.item-l-img{
+  text-align: center;
+
+  img{
+    width: 680px;
+    height: 680px;
+    object-fit: contain;
+  }
 }

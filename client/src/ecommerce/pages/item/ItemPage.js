@@ -1,15 +1,25 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { useEffect } from 'react'
 import ItemLayout from '../../components/ItemP/ItemLayout/ItemLayout'
+import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { actions } from '../../redux/items/actions';
 
-const ItemPage = props => {
+const ItemPage = () => {
+
+  const { id: itemId } = useParams();
+  const dispatch = useDispatch();
+
+  useEffect( () => {
+    dispatch( actions.searchAndSetItem( itemId ) );
+    return async () => {
+      dispatch( actions.cleanList() );
+    }
+  }, [dispatch, itemId])
+  
+
   return (
-    <div>
-      <ItemLayout />
-    </div>
+    <ItemLayout />
   )
 }
-
-ItemPage.propTypes = {}
 
 export default ItemPage

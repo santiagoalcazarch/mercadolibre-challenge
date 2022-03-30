@@ -1,5 +1,3 @@
-
-
 import React, { useMemo } from 'react'
 import PropTypes from 'prop-types'
 import Shipping from '../../../../shared/assets/icons/ic_shipping@2x.png'
@@ -7,7 +5,11 @@ import Shipping from '../../../../shared/assets/icons/ic_shipping@2x.png'
 const Item = ({ item }) => {
 
   const itemPrice = useMemo(() => 
-    new Intl.NumberFormat('en-CO', { currency: item.price?.currency }).format( item.price?.amount )
+    new Intl.NumberFormat('es-CO', { 
+      style: 'currency', 
+      currency: item.price?.currency,
+      maximumFractionDigits: 0
+    }).format( item.price?.amount )
   , [item.price]);
   
   return (
@@ -19,7 +21,7 @@ const Item = ({ item }) => {
           </div>
           <div className="item-data-desc ml-2 my-3">
             <div className="item-price-tx c-row">
-              <div> $ { itemPrice } </div>
+              <div> { itemPrice } </div>
               {
                 item.free_shipping && (
                   <div className="shipping-icon mx-3"> <img src={Shipping} alt="Free shipping" /> </div>

@@ -12,16 +12,14 @@ const getListItems = async ( query, limit ) => {
 }
 
 const getItemInformation = async ( itemId ) => {
+  let itemInfo = {};
   try {
     const item = await axios.get( api_routes.API_MELI_ITEM(itemId) )
+    itemInfo.item = item.data;
     const itemDescription = await axios.get( api_routes.API_MELI_ITEM_DESC(itemId) )
-    return {
-      item: item.data,
-      itemDescription: itemDescription.data,
-    };
-  } catch (error) {
-    return undefined;
-  }
+    itemInfo.itemDescription = itemDescription.data;
+  } catch (error) {}
+  return itemInfo;
 }
 
 const getCategory = async ( categoryId ) => {

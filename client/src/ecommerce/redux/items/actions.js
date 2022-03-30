@@ -32,6 +32,41 @@ const searchAndSetItemsList = ( query ) => {
   }
 }
 
+const searchAndSetItem = ( itemId ) => {
+  return async ( dispatch ) => {
+
+    dispatch({
+      type: itemsTypes.setRequestState,
+      payload: requestState.LOADING,
+    });
+
+    const item = await itemService.getItemById(itemId);
+
+    if ( item ) {
+      dispatch({
+        type: itemsTypes.setItem,
+        payload: item,
+      });
+    } else{
+      dispatch({
+        type: itemsTypes.setRequestState,
+        payload: requestState.FAILED,
+      });
+    }
+  }
+}
+
+
+const cleanList = ( ) => {
+  return async ( dispatch ) => {
+    dispatch({
+      type: itemsTypes.cleanList,
+    });
+  }
+}
+
 export const actions = {
-  searchAndSetItemsList
+  searchAndSetItemsList,
+  searchAndSetItem,
+  cleanList
 }

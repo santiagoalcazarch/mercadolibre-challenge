@@ -3,11 +3,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const BlueButton = ({ child }) => {
+const BlueButton = ({ child, onClick }) => {
   return (
     <div>
       <button
         className="btn blue-button"
+        onClick={onClick}
       >
         { child }
       </button>

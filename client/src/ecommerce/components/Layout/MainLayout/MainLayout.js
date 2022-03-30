@@ -6,15 +6,13 @@ import Breadcrumb from '../../../../shared/components/Breadcrumb/Breadcrumb'
 const MainLayout = () => {
 
   return (
-    <div className="container-fluid full-bg">
-      <main className="container">
+    <main className="container">
 
-        <Breadcrumb />
+      <Breadcrumb />
 
-        <Outlet />
-        
-      </main>
-    </div>
+      <Outlet />
+      
+    </main>
   )
 }
 

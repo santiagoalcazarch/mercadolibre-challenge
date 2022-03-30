@@ -1,18 +1,19 @@
 
 import React from 'react'
 import PropTypes from 'prop-types';
-import Img from "./test.png";
 
-const ItemImage = ({}) => {
+const ItemImage = ({ imageSrc, alt }) => {
+
   return (
-    <div>
-      <div className="item-l-img">
-        <img src={Img} />
-      </div>
+    <div className="item-l-img">
+      <img src={imageSrc} alt={alt} />
     </div>
   )
 }
 
-ItemImage.propTypes = {}
+ItemImage.propTypes = {
+  imageSrc: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired
+}
 
 export default ItemImage

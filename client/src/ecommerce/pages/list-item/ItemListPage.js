@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ItemList from '../../components/ItemListP/ItemList/ItemList'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { requestState as requestStateEnum } from "../../../helpers/request_states";
 import Loading from '../../../shared/components/Loading/Loading';
 import MessageBox from '../../../shared/components/Message-box/Message_box';
+import { actions } from '../../redux/items/actions';
 
 const ListItemPage = () => {
 
   const { itemsList, requestState } = useSelector(( state ) => state.items);
 
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    return async () => {
+      dispatch( actions.cleanList() );
+    }
+  }, [dispatch])
+  
   return (
     <div>
       {

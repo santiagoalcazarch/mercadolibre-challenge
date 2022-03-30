@@ -38,7 +38,7 @@ const getItemsList = async ( req, res ) => {
   const query = req.params.id;
   const apiMeliResponse = await repository.getItemInformation(query)
   
-  if ( apiMeliResponse ) {
+  if ( apiMeliResponse.item ) {
 
     const { item, itemDescription } = apiMeliResponse;
 
