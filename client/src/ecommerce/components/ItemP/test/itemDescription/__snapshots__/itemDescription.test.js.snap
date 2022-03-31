@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemDescription component test Debería renderizar el componente correctamente 1`] = `
+<div
+  className="item-l-desc-content mt-4"
+>
+  <div>
+    <h3>
+       Descripción del producto 
+    </h3>
+  </div>
+  <p
+    className="item-l-description"
+  >
+    lorem ipsum dolor sit amet, consectetur adipiscing
+  </p>
+</div>
+`;

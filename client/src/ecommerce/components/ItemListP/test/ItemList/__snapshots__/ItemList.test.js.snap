@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemList component test Debería hacer match con el snapshot 1`] = `
+<div
+  className="item-list-container"
+>
+  <div
+    className="item-list-content"
+  >
+    <div
+      className="item-list-item"
+      key="MCO854837339"
+    >
+      <Link
+        to="/items/MCO854837339"
+      >
+        <Item
+          item={
+            Object {
+              "condition": "new",
+              "free_shipping": true,
+              "id": "MCO854837339",
+              "location": "Bogotá D.C.",
+              "picture": "http://http2.mlstatic.com/D_613152-MLA47073710736_082021-I.jpg",
+              "price": Object {
+                "amount": 5555,
+                "currency": "COP",
+                "decimals": 0,
+              },
+              "title": "Impresora de buena calidad",
+            }
+          }
+        />
+        <div
+          className="item-divider"
+        />
+      </Link>
+    </div>
+    <div
+      className="item-list-item"
+      key="MCO9999"
+    >
+      <Link
+        to="/items/MCO9999"
+      >
+        <Item
+          item={
+            Object {
+              "condition": "used",
+              "free_shipping": false,
+              "id": "MCO9999",
+              "location": "Popayan",
+              "picture": "http://http2.mlstatic.com/D_613152-MLA47073710736_082021-I.jpg",
+              "price": Object {
+                "amount": 2222,
+                "currency": "COP",
+                "decimals": 0,
+              },
+              "title": "Computador de segunda",
+            }
+          }
+        />
+        <div
+          className="item-divider"
+        />
+      </Link>
+    </div>
+    <div
+      className="item-list-item"
+      key="MCO8547777"
+    >
+      <Link
+        to="/items/MCO8547777"
+      >
+        <Item
+          item={
+            Object {
+              "condition": "new",
+              "free_shipping": true,
+              "id": "MCO8547777",
+              "location": "Bogotá D.C.",
+              "picture": "http://http2.mlstatic.com/D_613152-MLA47073710736_082021-I.jpg",
+              "price": Object {
+                "amount": 111111,
+                "currency": "COP",
+                "decimals": 0,
+              },
+              "title": "Mouse de buena calidad",
+            }
+          }
+        />
+        <div
+          className="item-divider"
+        />
+      </Link>
+    </div>
+    <div
+      className="item-list-item"
+      key="MCO999944444"
+    >
+      <Link
+        to="/items/MCO999944444"
+      >
+        <Item
+          item={
+            Object {
+              "condition": "used",
+              "free_shipping": false,
+              "id": "MCO999944444",
+              "location": "Popayan",
+              "picture": "http://http2.mlstatic.com/D_613152-MLA47073710736_082021-I.jpg",
+              "price": Object {
+                "amount": 9898989,
+                "currency": "COP",
+                "decimals": 0,
+              },
+              "title": "Diademas de segunda",
+            }
+          }
+        />
+        <div
+          className="item-divider"
+        />
+      </Link>
+    </div>
+  </div>
+</div>
+`;

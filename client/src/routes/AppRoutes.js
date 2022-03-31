@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from '../ecommerce/pages/home/Layout'
 import ListItemPage from '../ecommerce/pages/list-item/ItemListPage'
-import UnknownRoute from '../ecommerce/pages/UnknownRoute/UnknownRoute'
+import UnknownRoute from '../ecommerce/pages/unknown-route/UnknownRoute'
 import Welcome from '../ecommerce/pages/welcome/welcome'
 import { HOME, ITEM, LIST_ITEM } from './routes'
 

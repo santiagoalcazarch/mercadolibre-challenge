@@ -19,7 +19,7 @@ const ItemDescription = ({ itemDescription }) => {
 }
 
 ItemDescription.propTypes = {
-  itemDescription: PropTypes.string.isRequired
+  itemDescription: PropTypes.string
 }
 
 export default ItemDescription

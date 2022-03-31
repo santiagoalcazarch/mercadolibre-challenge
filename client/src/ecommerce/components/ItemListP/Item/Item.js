@@ -18,7 +18,8 @@ const Item = ({ item }) => {
     new Intl.NumberFormat('es-CO', { 
       style: 'currency', 
       currency: item.price?.currency,
-      maximumFractionDigits: 0
+      maximumFractionDigits: 0,
+      minimumFractionDigits: 0
     }).format( item.price?.amount )
   , [item.price]);
   
@@ -31,7 +32,7 @@ const Item = ({ item }) => {
           </div>
           <div className="item-data-desc ml-2 my-3">
             <div className="item-price-tx c-row">
-              <div> { itemPrice } </div>
+              <span> { itemPrice } </span>
               {
                 item.free_shipping && (
                   <div className="shipping-icon mx-3"> <img src={Shipping} alt="Free shipping" /> </div>

@@ -17,7 +17,8 @@ const ItemData = ({ item }) => {
     new Intl.NumberFormat('es-CO', { 
       style: 'currency', 
       currency: item.price?.currency,
-      maximumFractionDigits: 0
+      maximumFractionDigits: 0,
+      minimumFractionDigits: 0
     }).format( item.price?.amount )
   , [item.price]);
 

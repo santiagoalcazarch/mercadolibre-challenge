@@ -9,7 +9,7 @@ import SearchImg from '../../assets/icons/ic_Search@2x.png'
 import { LIST_ITEM } from '../../../routes/routes';
 
 /** Input del SearchBar */
-const SearchInput = ({ serachInitValue = "" }) => {
+const SearchInput = ({ serachInitValue }) => {
 
   const navigate = useNavigate();
 

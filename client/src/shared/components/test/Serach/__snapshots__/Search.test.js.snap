@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search-bar test Debería hacer match con el snapshot 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="input-group my-3 search-input ml-4"
+  >
+    <input
+      aria-label="serach-action"
+      aria-labelledby="serach-action"
+      className="form-control"
+      id="search"
+      name="search"
+      onChange={[Function]}
+      placeholder="Nunca dejes de buscar"
+      type="text"
+      value=""
+    />
+    <span
+      className="input-group-text m-0 p-0"
+      id="serach-action"
+    >
+      <button
+        className="search-btn"
+        id="search-btn"
+        type="submit"
+      >
+        <img
+          alt="Search"
+          src="ic_Search@2x.png"
+        />
+      </button>
+    </span>
+  </div>
+</form>
+`;

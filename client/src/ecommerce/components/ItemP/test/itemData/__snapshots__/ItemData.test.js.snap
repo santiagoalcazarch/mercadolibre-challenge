@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemData component test Debería renderizar el componente correctamente 1`] = `
+<div
+  className="item-l-data"
+>
+  <div
+    className="item-l-state-sold"
+  >
+    Nuevo - 
+    12
+     vendidos
+  </div>
+  <div
+    className="item-l-name"
+  >
+     
+    iPhone 13
+     
+  </div>
+  <div
+    className="item-l-price"
+  >
+     
+    $ 12.000
+     
+  </div>
+  <BlueButton
+    child="Comprar"
+  />
+</div>
+`;

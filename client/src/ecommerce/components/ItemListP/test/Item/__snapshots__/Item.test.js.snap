@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item component test Debería hacer match con el snapshot 1`] = `
+<div
+  className="item-container c-row"
+>
+  <div
+    className="item-data col-sm-10"
+  >
+    <div
+      className="item-data-container d-flex align-items-top"
+    >
+      <div
+        className="item-image"
+      >
+        <img
+          alt="Impresora de buena calidad"
+          src="http://http2.mlstatic.com/D_613152-MLA47073710736_082021-I.jpg"
+        />
+      </div>
+      <div
+        className="item-data-desc ml-2 my-3"
+      >
+        <div
+          className="item-price-tx c-row"
+        >
+          <span>
+             
+            $ 773.500
+             
+          </span>
+          <div
+            className="shipping-icon mx-3"
+          >
+             
+            <img
+              alt="Free shipping"
+              src="ic_shipping@2x.png"
+            />
+             
+          </div>
+        </div>
+        <div
+          className="item-desc-tx"
+        >
+          <span>
+             
+            Impresora de buena calidad
+             
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="item-location col-sm-2"
+  >
+    Bogotá D.C.
+  </div>
+</div>
+`;
