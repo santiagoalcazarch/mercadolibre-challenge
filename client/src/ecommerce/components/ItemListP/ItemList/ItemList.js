@@ -27,7 +27,7 @@ const ItemList = ({ itemList }) => {
   }
 
   return (
-    <div className="item-list-container">
+    <div className="item-list-container animate__animated animate__fadeIn ">
       <div className="item-list-content">
         {
           itemList.map((item) =>

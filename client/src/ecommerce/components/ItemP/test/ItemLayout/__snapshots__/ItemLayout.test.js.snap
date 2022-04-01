@@ -2,7 +2,7 @@
 
 exports[`Breadcrumb test Debería hacer match con el snapshot 1`] = `
 <div
-  className="message-box message p-5"
+  className="message-box message p-5 animate__animated animate__fadeIn"
 >
   <div>
      

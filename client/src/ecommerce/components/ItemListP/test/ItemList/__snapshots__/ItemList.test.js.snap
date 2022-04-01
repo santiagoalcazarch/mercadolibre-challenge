@@ -2,7 +2,7 @@
 
 exports[`ItemList component test Debería hacer match con el snapshot 1`] = `
 <div
-  className="item-list-container"
+  className="item-list-container animate__animated animate__fadeIn "
 >
   <div
     className="item-list-content"

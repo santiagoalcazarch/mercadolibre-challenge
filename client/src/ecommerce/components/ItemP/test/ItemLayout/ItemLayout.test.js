@@ -68,8 +68,8 @@ describe('Breadcrumb test', () => {
       </Provider>
     )
 
-    const loadingSpinner = wrapper.find(".spinner-border").exists();
-    expect(loadingSpinner).toBeTruthy();
+    const loadingText = wrapper.find(".message-box div").text().trim();
+    expect(loadingText).toBe("Loading...")
   });
 
   test('Debería mostrar la información de un item', () => {
@@ -83,7 +83,7 @@ describe('Breadcrumb test', () => {
             currency: "COP", 
             amount: 12000, 
           },
-          picture: "",
+          picture: "http://www.imge.com/image.png",
           condition: "new", 
           free_shipping: true, 
           sold_quantity: 12,
@@ -105,7 +105,9 @@ describe('Breadcrumb test', () => {
     const itemData = wrapper.find(".item-l-data-content").exists();
     const itemDesc = wrapper.find(".item-l-data-description").exists();
 
-    expect(itemImage && itemData && itemDesc).toBeTruthy();
+    expect(itemImage).toBeTruthy();
+    expect(itemData).toBeTruthy();
+    expect(itemDesc).toBeTruthy();
   });
 
 });

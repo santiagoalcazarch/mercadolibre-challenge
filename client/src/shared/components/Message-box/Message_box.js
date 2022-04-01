@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
  */
 const MessageBox = ({title, description}) => {
   return (
-    <div className="message-box message p-5">
+    <div className="message-box message p-5 animate__animated animate__fadeIn">
       <div> <h1> { title } </h1> </div>
       <p> { description } </p>
     </div>

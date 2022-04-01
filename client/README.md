@@ -1,70 +1,44 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Meli Frontend Challenge
 
-## Available Scripts
+En la presente carpeta se encuentra el código fuente relacionado al Frontend - Meli Challenge
 
-In the project directory, you can run:
+## Proyecto
 
-### `npm start`
+Como tecnología y librería principal se encuentra React utilizando Javascript para sacar el máximo potencial de los hooks y demás. Para la gestión de estados se utilizó Redux y en cuanto a testing, se utilizó Jest y Enzyme, los cuales son un magnífica combinación para las pruebas tanto unitarias como de integración
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Arquitectura
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+El proyecto fue construido utilizando React, con una arquitectura basada en Redux, donde los componentes envían acciones, los cuales generan un estado. Estas acciones pueden llamar a un API-REST (constituido en la carpeta [server](./../server) para así, generar cierto estado y poder consumirlo en cualquier lugar de la aplicación, por algún otro component, por ejemplo.  
 
-### `npm test`
+![alt Arquitectura Front end](./wiki/Arquitectura%20Front.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Como se puede observar en la imagen superior, diferentes componentes hacen un `disptach` de alguna acción, como por ejemplo el componente `<Item />` al inicializarce, el cual hace un llamado a un API (de acuerdo al párametro de la URL) y de acuerdo a esa respuesta, generar un estado almacenando un Item de manera global, para ser consumido por este mismo componente.
 
-### `npm run build`
+**Es importante mencionar que se realizó de esta forma pensando en la posible inclusión futura de cualquier componente que podría consumir este estado, como por ejemplo, una pasarela de pagos**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![alt Arquitectura Front end](./wiki/Capas.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+En la presente arquitectura también se puede evidenciar la separación de capas que se realiza, con el objetivo de un código mejor estructurado y organizado. Esto permite en un futuro realizar el mantenimiento de una mejor manera, separando cambios en la vista, la lógica, el acceso a datos en diferentes funciones. Todo esto favoreciendo igualmente el fácil testing de la aplicación, siendo posible realizar pruebas atómicas y precisas.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Finalmente, basándose en la arquitectura limpia (clean code) y organizando el código adecuadamente, se estableció tal estructura de carpetas, donde adentrándose en el código, el desarrollador puede saber en que parte de la aplicación de encuentra de manera clara y precisa.
 
-### `npm run eject`
+## Testing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Para realizar las pruebas del código, se utilizó Jest, completando exitosamente 35 test:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![alt Testing](./wiki/testing.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Se realizaron las pruebas que se consideraban más importantes o que de una u otra forma se relacionaban con la ruta crítica de la aplicación.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## `Coding`
 
-## Learn More
+Puedes ejecutiar el proyecto con la siguiente instrución:
+`npm start`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Tambien puedes ejecutar las pruebas con la instrución:
+`npm test`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Made with ❤️ by Santiago 👨🏽‍💻 
