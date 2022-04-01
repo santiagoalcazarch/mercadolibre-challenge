@@ -5,17 +5,17 @@ import ItemData from "../../ItemData/ItemData";
 describe('ItemData component test', () => {
 
   const item = {
-    "id": "MCO3423",
-    "title": "iPhone 13", 
-    "price": {
-      "currency": "COP", 
-      "amount": 12000, 
+    id: "MCO3423",
+    title: "iPhone 13", 
+    price: {
+      currency: "COP", 
+      amount: 12000, 
     },
-    "picture": "",
-    "condition": "new", 
-    "free_shipping": true, 
-    "sold_quantity": 12,
-    "description": "lorem ipsum dolor sit amet, consect"
+    picture: "",
+    condition: "new", 
+    free_shipping: true, 
+    sold_quantity: 12,
+    description: "lorem ipsum dolor sit amet, consect"
   }
 
   const wrapper = shallow( <ItemData item={item} /> );

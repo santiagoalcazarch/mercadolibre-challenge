@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb test Debería hacer match con el snapshot 1`] = `
+<div
+  className="message-box message p-5"
+>
+  <div>
+     
+    <h1>
+       
+      Error
+       
+    </h1>
+     
+  </div>
+  <p>
+     
+    Ha ocurrido un error obteniendo la información :(
+     
+  </p>
+</div>
+`;

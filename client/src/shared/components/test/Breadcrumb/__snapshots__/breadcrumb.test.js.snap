@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb test Debería hacer match con el snapshot 1`] = `
+<div
+  className="container p-0"
+>
+  <div
+    className="breadcrumb-container"
+  >
+    <ul
+      className="breadcrumb-items p-0"
+    />
+  </div>
+</div>
+`;
